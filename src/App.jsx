@@ -1,6 +1,6 @@
 // don't forget to import useEffect from react
 import { useEffect, useState } from "react";
-
+import "./styles.css";
 
 export default function App() {
   // need state to keep track of todos
@@ -23,7 +23,6 @@ export default function App() {
   });
   // need state to keep track of the value in the input
   const [todo, setTodo] = useState("");
-  
 
   // useEffect to run once the component mounts
   useEffect(() => {
@@ -37,7 +36,7 @@ export default function App() {
   }, [todos]);
 
   // function to get the value of the input and set the new state
-  function handleIInputChange(e) {
+  function handleInputChange(e) {
     // set the new state value to what's currently in the input box
     setTodo(e.target.value);
   }
